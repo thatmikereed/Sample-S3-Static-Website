@@ -10,12 +10,16 @@ A fully client-side web application for managing and displaying products, hosted
 - Real-time stock status indicators (In Stock, Low Stock, Out of Stock)
 - Clean, modern UI
 
+![Storefront Demo](https://github.com/user-attachments/assets/20743aae-dddc-4680-b05a-4224921c6dc3)
+
 ### Admin Panel (admin.html)
 - Add new products with image upload
 - View all existing products
 - Delete products
 - Real-time image preview
 - Form validation
+
+![Admin Panel Demo](https://github.com/user-attachments/assets/187c56c0-6267-48d3-90f7-fe69bfd6cbc6)
 
 ## Architecture
 
@@ -169,17 +173,28 @@ Or use the AWS Console to upload files manually.
 3. Confirm the deletion
 4. The product will be removed from S3
 
+## Demo Pages
+
+To preview the UI without AWS configuration, you can use the demo pages:
+- `demo-storefront.html` - Shows the storefront with sample products
+- `demo-admin.html` - Shows the admin panel interface
+
+These demo pages display static sample data and don't require AWS credentials.
+
 ## File Structure
 
 ```
 .
-├── index.html          # Main storefront page
-├── admin.html          # Admin/inventory management page
-├── styles.css          # Shared CSS styles
-├── config.js           # AWS configuration
-├── storefront.js       # Storefront functionality
-├── admin.js            # Admin panel functionality
-└── README.md           # This file
+├── index.html              # Main storefront page
+├── admin.html              # Admin/inventory management page
+├── styles.css              # Shared CSS styles
+├── config.js               # AWS configuration
+├── config.template.js      # Configuration template
+├── storefront.js           # Storefront functionality
+├── admin.js                # Admin panel functionality
+├── demo-storefront.html    # Demo/preview page for storefront
+├── demo-admin.html         # Demo/preview page for admin
+└── README.md               # This file
 ```
 
 ## Security Considerations

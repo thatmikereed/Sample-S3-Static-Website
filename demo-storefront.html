@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Storefront Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="admin-demo.html" class="admin-link">Admin Panel</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="products-container" class="products-grid">
+            <!-- Sample Product 1 -->
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%234a90e2' width='400' height='300'/%3E%3Ctext fill='white' x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='24'%3ELaptop Computer%3C/text%3E%3C/svg%3E" alt="Laptop Computer" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Professional Laptop</h3>
+                    <p class="product-description">High-performance laptop with 16GB RAM, 512GB SSD, and Intel Core i7 processor. Perfect for work and play.</p>
+                    <div class="product-details">
+                        <span class="product-price">$1,299.99</span>
+                        <span class="product-quantity">In Stock: 15</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sample Product 2 -->
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%2350c878' width='400' height='300'/%3E%3Ctext fill='white' x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='24'%3EWireless Mouse%3C/text%3E%3C/svg%3E" alt="Wireless Mouse" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Ergonomic Wireless Mouse</h3>
+                    <p class="product-description">Comfortable wireless mouse with precision tracking and long battery life. Perfect for extended use.</p>
+                    <div class="product-details">
+                        <span class="product-price">$29.99</span>
+                        <span class="product-quantity">In Stock: 50</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sample Product 3 -->
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23f5a623' width='400' height='300'/%3E%3Ctext fill='white' x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='24'%3EWireless Headphones%3C/text%3E%3C/svg%3E" alt="Headphones" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Premium Wireless Headphones</h3>
+                    <p class="product-description">Noise-cancelling wireless headphones with crystal clear audio and 30-hour battery life.</p>
+                    <div class="product-details">
+                        <span class="product-price">$249.99</span>
+                        <span class="product-quantity low-stock">Only 5 left!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sample Product 4 -->
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23bd10e0' width='400' height='300'/%3E%3Ctext fill='white' x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='24'%3E4K Monitor%3C/text%3E%3C/svg%3E" alt="Monitor" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">27" 4K Monitor</h3>
+                    <p class="product-description">Ultra HD 4K display with HDR support and 144Hz refresh rate. Perfect for gaming and content creation.</p>
+                    <div class="product-details">
+                        <span class="product-price">$599.99</span>
+                        <span class="product-quantity">In Stock: 8</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sample Product 5 -->
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23d0021b' width='400' height='300'/%3E%3Ctext fill='white' x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='24'%3EMechanical Keyboard%3C/text%3E%3C/svg%3E" alt="Keyboard" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">RGB Mechanical Keyboard</h3>
+                    <p class="product-description">Premium mechanical keyboard with customizable RGB lighting and Cherry MX switches.</p>
+                    <div class="product-details">
+                        <span class="product-price">$149.99</span>
+                        <span class="product-quantity low-stock">Only 3 left!</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sample Product 6 -->
+            <div class="product-card">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%237ed321' width='400' height='300'/%3E%3Ctext fill='white' x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-size='24'%3EWebcam%3C/text%3E%3C/svg%3E" alt="Webcam" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">HD Webcam</h3>
+                    <p class="product-description">1080p HD webcam with auto-focus and built-in microphone. Perfect for video calls and streaming.</p>
+                    <div class="product-details">
+                        <span class="product-price">$79.99</span>
+                        <span class="product-quantity out-of-stock">Out of Stock</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Product Storefront. Powered by AWS S3 & CloudFront.</p>
+        <p><em>This is a demo page showing sample products</em></p>
+    </footer>
+</body>
+</html>
