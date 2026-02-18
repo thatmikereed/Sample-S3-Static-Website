@@ -250,20 +250,26 @@ function createAdminProductItem(product) {
     item.className = 'admin-product-item';
     
     item.innerHTML = `
-        <img src="${product.imageUrl}" alt="${escapeHtml(product.name)}" class="admin-product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23ddd%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3ENo Image%3C/text%3E%3C/svg%3E'">
+        <img src="${escapeHtml(product.imageUrl)}" alt="${escapeHtml(product.name)}" class="admin-product-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%23ddd%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23999%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3ENo Image%3C/text%3E%3C/svg%3E'">
         <div class="admin-product-info">
             <h3>${escapeHtml(product.name)}</h3>
             <p>${escapeHtml(product.description)}</p>
             <div class="admin-product-meta">
                 <span>Price: $${parseFloat(product.price).toFixed(2)}</span>
                 <span>Quantity: ${product.quantity}</span>
-                <span>ID: ${product.id}</span>
+                <span>ID: ${escapeHtml(product.id)}</span>
             </div>
         </div>
         <div class="admin-product-actions">
-            <button class="btn btn-danger" onclick="deleteProduct('${product.id}', '${escapeHtml(product.name)}')">Delete</button>
+            <button class="btn btn-danger delete-btn">Delete</button>
         </div>
     `;
+    
+    // Add event listener for delete button (safer than inline onclick)
+    const deleteBtn = item.querySelector('.delete-btn');
+    deleteBtn.addEventListener('click', () => {
+        deleteProduct(product.id, product.name);
+    });
     
     return item;
 }
