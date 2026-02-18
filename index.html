@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Storefront</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <a href="admin.html" class="admin-link">Admin Panel</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="loading">Loading products...</div>
+        <div id="error" class="error-message" style="display: none;"></div>
+        <div id="products-container" class="products-grid"></div>
+        <div id="no-products" style="display: none;" class="no-products">
+            No products available yet. Visit the <a href="admin.html">Admin Panel</a> to add products.
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2026 Product Storefront. Powered by AWS S3 & CloudFront.</p>
+    </footer>
+    
+    <!-- AWS SDK for JavaScript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1000.0.min.js"></script>
+    <script src="config.js"></script>
+    <script src="storefront.js"></script>
+</body>
+</html>
